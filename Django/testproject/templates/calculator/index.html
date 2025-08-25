@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Calculator</h1>     
+    <form action=""  method="POST">
+        {% csrf_token %}
+        <textarea name="result">
+            {{result}}
+        </textarea>
+        <br><br><br>
+        <input type="number" name="num1">
+        <br><br><br>
+        <input type="number" name="num2">
+        <br><br><br>
+        <button type="submit" name="operator" value="+"> add </button>
+        <button type="submit" name="operator" value="-">  sub </button>
+        <button type="submit" name="operator" value="*">  mul </button>
+        <button type="submit" name="operator" value="/">  div </button>
+    </form>
+</body>
+</html>
